@@ -54,7 +54,13 @@ public class UnixServerSocketChannel extends NativeServerSocketChannel {
         int maxLength = addr.getMaximumLength();
         IntByReference len = new IntByReference(maxLength);
 
-        int clientfd = Native.accept(getFD(), addr, len);
+        int clientfd = -1;
+        try {
+            begin();
+            clientfd = Native.accept(getFD(), addr, len);
+        } finally {
+            end(clientfd >= 0);
+        }
 
         if (clientfd < 0) {
             if (isBlocking()) {

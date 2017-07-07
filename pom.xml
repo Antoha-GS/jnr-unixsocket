@@ -1,16 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>7</version>
-  </parent>
+  <distributionManagement>
+    <repository>
+      <id>bintray-funcorp-ifunny-mvn</id>
+      <name>funcorp-ifunny-mvn</name>
+      <url>https://api.bintray.com/maven/funcorp/ifunny-mvn/main/;publish=1</url>
+    </repository>
+  </distributionManagement>
 
-  <groupId>com.github.jnr</groupId>
+  <groupId>co.ifunny.jnr</groupId>
   <artifactId>jnr-unixsocket</artifactId>
   <packaging>jar</packaging>
-  <version>0.19-SNAPSHOT</version>
+  <version>0.19</version>
   <name>jnr-unixsocket</name>
   <description>Native I/O access for java</description>
   <url>http://github.com/jnr/jnr-unixsocket</url>
