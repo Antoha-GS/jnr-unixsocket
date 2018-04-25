@@ -3,9 +3,8 @@
 
   <distributionManagement>
     <repository>
-      <id>bintray-funcorp-ifunny-mvn</id>
-      <name>funcorp-ifunny-mvn</name>
-      <url>https://api.bintray.com/maven/funcorp/ifunny-mvn/main/;publish=1</url>
+      <id>nexus-funcorp-ifunny-mvn</id>
+      <url>http://repohost.fun.co/repository/ifunny-mvn/</url>
     </repository>
   </distributionManagement>
 
